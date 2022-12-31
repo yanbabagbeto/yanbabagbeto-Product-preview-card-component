@@ -1,0 +1,126 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    background-color: hsl(30, 38%, 92%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    /* border: 1px solid red; */
+    display: flex;
+    margin-inline: auto;
+    width: min(70vw, 800px);
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 15px #ccc;
+    border-radius: 15px;
+    min-height: 90vh;
+    margin-bottom: 1rem;
+}
+
+.one {
+    min-height: 35vh;
+    flex: 1.5 0 40%;
+    /* border: 1px solid black; */
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-position: center;
+
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 60%;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white;
+}
+
+.two p {
+background-color: white;}
+
+.two .semi-title{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.two .slogan, .price {
+    font-family: 'Fraunces', serif;
+    font-size: 2.1rem;
+   
+}
+.price {
+    color: hsl(158, 36%, 37%);
+}
+.price sup {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-left: 0.5rem;
+    text-decoration: line-through;
+    color: black;
+background-color: white;
+}
+.description {
+    line-height: 1.6;
+}
+
+/* a:link, a:visited {
+    text-decoration: none;
+    /* color: white; 
+} */
+button {
+    display: block;
+    background-color: hsl(158, 36%, 37%);
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    border: 0;
+    font-size: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    padding: .8rem;
+    border-radius: 8px;
+    /* margin-bottom: 0.5rem; */
+}
+svp {
+    stroke: black;
+    fill: transparent;
+}
+
+@media screen and (min-width: 650px){
+    main {
+        flex-direction: row;
+        /* max-height: 500px; */
+        min-height: initial;
+    }
+    .one,.two {
+        flex: 1 1 auto;
+        width: 50%;
+    }
+
+    .one {
+        border-top-right-radius: revert;
+        border-bottom-left-radius: 15px;
+        
+    
+    }
+    .two {
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: revert;
+    }
+  
+}
